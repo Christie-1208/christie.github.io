@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识文章</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 自定义样式 */
+        .article-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* 确保卡片高度一致 */
+        }
+        .article-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px; /* 固定图片高度 */
+            object-fit: cover; /* 图片裁剪，保持比例 */
+        }
+        .article-card .card-body {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            color: #fff;
+            height: 100%; /* 卡片内容区域高度一致 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .article-card .card-title {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .article-card .card-text {
+            font-size: 0.95rem;
+            margin-bottom: 1rem; /* 为按钮留出空间 */
+        }
+        .article-card .btn {
+            background-color: #fff;
+            color: #0072ff;
+            border-radius: 20px;
+            font-weight: bold;
+            align-self: flex-start;
+        }
+        .article-card .btn:hover {
+            background-color: #0072ff;
+            color: #fff;
+        }
+        .page-title {
+            color: #0072ff;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+               <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                   <div class="container-fluid">
+                       <a class="navbar-brand" href="index.html">AI知识库</a>
+                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarNav">
+                           <ul class="navbar-nav">
+                               <li class="nav-item">
+                                   <a class="nav-link" href="index.html">首页</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="knowledge.html">知识库</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link active" href="tools.html">AI学习工具</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="contact.html">联系我们</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" href="articles.html">AI知识文章</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </nav>
+
+    <!-- 页面内容 -->
+    <div class="container my-5">
+        <h1 class="page-title">AI知识文章</h1>
+        <div class="row g-4">
+            <!-- 文章卡片 1 -->
+            <div class="col-md-4">
+                <div class="card article-card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">人工智能的未来</h5>
+                        <p class="card-text">探索人工智能的最新趋势和未来发展方向，了解AI将如何改变我们的生活。</p>
+                        <p class="text-end"><small>发布日期：2024-12-01</small></p>
+                        <a href="./knowledge.html" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文章卡片 2 -->
+            <div class="col-md-4">
+                <div class="card article-card">
+                 
+                    <div class="card-body">
+                        <h5 class="card-title">机器学习基础入门</h5>
+                        <p class="card-text">学习机器学习的基本概念和核心算法，快速入门AI技术。</p>
+                        <p class="text-end"><small>发布日期：2024-11-20</small></p>
+                        <a href="./knowledge.html" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文章卡片 3 -->
+            <div class="col-md-4">
+                <div class="card article-card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">深度学习的核心技术</h5>
+                        <p class="card-text">了解深度学习的核心技术，包括神经网络和计算框架。</p>
+                        <p class="text-end"><small>发布日期：2024-11-15</small></p>
+                        <a href="./knowledge.html" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	  <!-- ECharts 图表容器 -->
+	        <div id="aiInterest" style="width: 100%; height: 400px;"></div>
+	    </div>
+
+    <!-- 脚注 -->
+    <footer class="text-center py-4 bg-light mt-5">
+        <p>2023106073房怡含</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+	        // 基于准备好的dom，初始化echarts实例
+	        var myChart = echarts.init(document.getElementById('aiInterest'));
+	
+	        // 指定图表的配置项和数据
+	        var option = {
+	            title: {
+	                text: 'AI技术领域关注度'
+	            },
+	            tooltip: {},
+	            legend: {
+	                data:['关注度']
+	            },
+	            xAxis: {
+	                data: ["机器学习","深度学习","自然语言处理","计算机视觉","强化学习"]
+	            },
+	            yAxis: {},
+	            series: [{
+	                name: '关注度',
+	                type: 'bar',
+	                data: [5, 20, 36, 10, 10]
+	            }]
+	        };
+	
+	        // 使用刚指定的配置项和数据显示图表。
+	        myChart.setOption(option);
+	    </script>
+</body>
+</html>
