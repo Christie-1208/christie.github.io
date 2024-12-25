@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>启动页 - AI知识库</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+       body {
+           margin: 0;
+           padding: 0;
+           height: 100vh;
+           background-color: #000; /* 黑色背景 */
+           color: white;
+           font-family: 'Arial', sans-serif;
+       }
+       
+       #startup-screen {
+           height: 100vh; /* 使启动屏占满视窗高度 */
+           display: flex; 
+           align-items: center; 
+           justify-content: center;
+           text-align: center;
+           background: linear-gradient(to bottom right, #3b82f6, #9333ea); /* 渐变背景 */
+           color: white;
+       }
+       
+       .welcome-title {
+           font-size: 3rem;
+           font-weight: bold;
+           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+           animation: fadeIn 1s ease-in-out;
+       }
+       
+       .welcome-title span {
+           color: #ffdd57; /* 为部分文字设置强调色 */
+       }
+       
+       .welcome-subtitle {
+           font-size: 1.5rem;
+           margin-top: 10px;
+           animation: fadeIn 2s ease-in-out;
+       }
+       
+       .btn-custom {
+           font-size: 1.2rem;
+           padding: 10px 20px;
+           border-radius: 50px;
+           transition: all 0.3s ease-in-out;
+           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+           width: 200px;
+           margin: 10px;
+       }
+       
+       .btn-custom:hover {
+           transform: scale(1.1);
+           box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+       }
+       
+       /* 动画效果 */
+       @keyframes fadeIn {
+           from {
+               opacity: 0;
+               transform: translateY(-20px);
+           }
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+	   /* 确保卡片大小一致 */
+	       .card {
+	           height: 100%;
+	           display: flex;
+	           flex-direction: column;
+	       }
+	   
+	       /* Hover 特效 */
+	       .card:hover {
+	           transform: scale(1.05);
+	           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+	       }
+	   
+	       /* 确保按钮样式一致 */
+	       .btn-light {
+	           background-color: #fff;
+	           color: #007bff;
+	           font-weight: bold;
+	           border-radius: 20px;
+	       }
+	   
+	       /* 防止卡片内容过长 */
+	       .card-body {
+	           flex-grow: 1;
+	       }
+
+    </style>
+</head>
+<body>
+    <!-- 欢迎界面 -->
+    <div id="startup-screen" class="d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="text-center">
+            <h1 class="welcome-title">欢迎来到 <span>小房的AI 知识库</span></h1>
+            <p class="welcome-subtitle">探索知识，激发灵感</p>
+            <div class="mt-4">
+                <button id="btn-enter" class="btn btn-primary btn-custom mx-2">进入主页</button>
+                <button id="btn-exit" class="btn btn-danger btn-custom mx-2">退出</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: 首页 (默认隐藏) -->
+    <div id="main-content" class="container-fluid d-none">
+        <!-- 导航栏 -->
+           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="margin-top: 20px;">
+
+               <div class="container-fluid">
+                   <a class="navbar-brand" href="index.html">AI知识库</a>
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                       <ul class="navbar-nav">
+                           <li class="nav-item">
+                               <a class="nav-link" href="index.html">首页</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="knowledge.html">知识库</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link active" href="tools.html">AI学习工具</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="contact.html">联系我们</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="articles.html">AI知识文章</a>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+           </nav>
+        
+            <!-- 页面内容 -->
+            <div class="container" >
+                <h1 class="mt-4">欢迎来到 AI 知识库</h1>
+                <p>这是一个关于人工智能知识的学习与分享平台。</p>
+                
+                
+               <div class="row d-flex justify-content-center">
+                   <!-- 卡片 1 -->
+                   <div class="col-md-4 mb-4">
+                       <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                           <img src="assets/images/2.png" class="card-img-top" alt="AI">
+                           <div class="card-body text-center" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+                               <h5 class="card-title" style="color: #fff; font-weight: bold;">人工智能介绍</h5>
+                               <p class="card-text" style="color: #fff;">了解人工智能的发展和核心技术。</p>
+                               <a href="./knowledge.html" class="btn btn-light" style="border-radius: 20px; font-weight: bold;">了解更多</a>
+                           </div>
+                       </div>
+                   </div>
+               
+                   <!-- 卡片 2 -->
+                   <div class="col-md-4 mb-4">
+                       <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                           <img src="assets/images/1.png" class="card-img-top" alt="Machine Learning">
+                           <div class="card-body text-center" style="background: linear-gradient(135deg, #ff7eb3, #ff758c);">
+                               <h5 class="card-title" style="color: #fff; font-weight: bold;">机器学习</h5>
+                               <p class="card-text" style="color: #fff;">探索机器学习的基础理论与应用。</p>
+                               <a href="./knowledge.html" class="btn btn-light" style="border-radius: 20px; font-weight: bold;">了解更多</a>
+                           </div>
+                       </div>
+                   </div>
+               
+                   <!-- 卡片 3 -->
+                   <div class="col-md-4 mb-4">
+                       <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                           <img src="assets/images/3.png" class="card-img-top" alt="Deep Learning">
+                           <div class="card-body text-center" style="background: linear-gradient(135deg, #42e695, #3bb2b8);">
+                               <h5 class="card-title" style="color: #fff; font-weight: bold;">深度学习</h5>
+                               <p class="card-text" style="color: #fff;">了解深度学习如何推动技术创新。</p>
+                               <a href="./knowledge.html" class="btn btn-light" style="border-radius: 20px; font-weight: bold;">了解更多</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btnEnter = document.getElementById('btn-enter');
+        const btnExit = document.getElementById('btn-exit');
+        const startupScreen = document.getElementById('startup-screen');
+        const mainContent = document.getElementById('main-content');
+
+        // 点击进入主页
+        btnEnter.addEventListener('click', () => {
+            startupScreen.classList.add('d-none');
+            mainContent.classList.remove('d-none');
+        });
+
+        // 点击退出
+        btnExit.addEventListener('click', () => {
+            alert('感谢访问，再见！');
+            window.close(); // 不支持某些浏览器
+        });
+    </script>
+</body>
+</html>

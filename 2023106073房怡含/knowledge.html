@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库 - AI知识库</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        /* 自定义样式 */
+        .carousel-inner img {
+            height: 400px;
+            object-fit: cover;
+        }
+		
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card-text {
+            min-height: 60px;
+        }
+		
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">AI知识库</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="knowledge.html">知识库</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tools.html">AI学习工具</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">联系我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">AI知识文章</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/2.png" class="d-block w-100" alt="AI 科技">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>探索 AI 世界</h5>
+                    <p>了解人工智能如何改变我们的生活。</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/1.png" class="d-block w-100" alt="机器学习">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>机器学习技术</h5>
+                    <p>掌握核心算法，拥抱创新。</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/3.png" class="d-block w-100" alt="深度学习">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>深度学习驱动未来</h5>
+                    <p>深入学习前沿技术的应用。</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 知识库内容 -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">AI 知识库</h1>
+        <div class="row">
+            <!-- 卡片1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">AI 基础知识</h5>
+                        <p class="card-text">了解人工智能的定义、发展历史及其重要应用场景。从理论到实践，让您轻松入门。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">机器学习</h5>
+                        <p class="card-text">机器学习的核心算法及其在图像识别、语音处理等领域的应用，助您走向科技前沿。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片3 -->
+            <div class="col-md-4">
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">深度学习</h5>
+                        <p class="card-text">深度学习如何改变人工智能领域的规则，推动无人驾驶、自然语言处理等技术的实现。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- 卡片4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">计算机视觉</h5>
+                        <p class="card-text">学习计算机视觉的基本原理及其在图像分类、目标检测等方面的强大能力。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片5 -->
+            <div class="col-md-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">自然语言处理</h5>
+                        <p class="card-text">探索 NLP 技术，学习如何构建聊天机器人、文本分析工具等智能应用。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片6 -->
+            <div class="col-md-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">AI 技术趋势</h5>
+                        <p class="card-text">把握人工智能发展的未来方向，了解最新技术和研究动态。</p>
+                        <a href="#" class="btn btn-primary">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
